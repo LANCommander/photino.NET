@@ -230,6 +230,14 @@ public partial class PhotinoWindow
     
     [LibraryImport(DLL_NAME, SetLastError = true)]
     [UnmanagedCallConv(CallConvs = new Type[] { typeof(System.Runtime.CompilerServices.CallConvCdecl) })]
+    static partial void Photino_StartDragging(IntPtr instance);
+
+    [LibraryImport(DLL_NAME, SetLastError = true)]
+    [UnmanagedCallConv(CallConvs = new Type[] { typeof(System.Runtime.CompilerServices.CallConvCdecl) })]
+    static partial void Photino_StartResizing(IntPtr instance, PhotinoWindowHitTestCode hitTestCode);
+    
+    [LibraryImport(DLL_NAME, SetLastError = true)]
+    [UnmanagedCallConv(CallConvs = new Type[] { typeof(System.Runtime.CompilerServices.CallConvCdecl) })]
     static partial void Photino_SetFlash(IntPtr instance, [MarshalAs(UnmanagedType.I1)] bool state);
 
     [LibraryImport(DLL_NAME, SetLastError = true)]
